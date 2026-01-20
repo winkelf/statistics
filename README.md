@@ -23,14 +23,12 @@ Events are binned into histograms, and inference is performed using a **Poisson 
 
 A binned Poisson log-likelihood is defined as
 
-\[
-\log \mathcal{L}(\mu) = \sum_i \left[ n_i \log(\mu s_i + b_i) - (\mu s_i + b_i) \right]
-\]
+log L(mu) = sum_i [ n_i * log(mu * s_i + b_i) - (mu * s_i + b_i) ]
 
 where:
-- \( n_i \) are the observed counts per bin,
-- \( s_i \) and \( b_i \) are the expected signal and background templates,
-- \( \mu \) is the signal strength parameter.
+- n_i are the observed counts per bin
+- s_i and b_i are the expected signal and background templates
+- mu is the signal strength parameter
 
 This likelihood is implemented in:
 
